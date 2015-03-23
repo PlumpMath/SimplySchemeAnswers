@@ -26,7 +26,8 @@
 
 ;;4.8
 ;;Note:  I couldn't think of a way of doing this notation without using
-;;some kind of exponent function first.
+;;some kind of exponent function first, and I couldn't find the exponent
+;;function.
 
 (define (exp a b)
     (cond ((= b 0) 1)
@@ -41,4 +42,7 @@
 (define (scientific a b)
     (* (exp 10 b) a))
 
-(display (scientific 42 5))
+;;4.9
+
+(define (discount price percentage)
+    (exact->inexact (- price (* price (/ percentage 100)))))
