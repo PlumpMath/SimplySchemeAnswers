@@ -46,3 +46,6 @@
 
 (define (discount price percentage)
     (exact->inexact (- price (* price (/ percentage 100)))))
+
+(define (tip bill)
+    (ceiling (* .15 bill)))
